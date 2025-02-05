@@ -8,7 +8,7 @@ class Solution:
             for i in range(len(merged)):
                 s, e = merged[i]
                 if start <= e:
-                    merged[i][1] = end
+                    merged[i][1] = max(end, e)
                     break
             else:
                 merged.append([start, end])
